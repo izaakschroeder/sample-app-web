@@ -1,0 +1,144 @@
+{
+	"env": {
+		"browser": true,
+		"node": true
+	},
+
+	"plugins": [
+		// Include lint rules for JSX
+		"react"
+	],
+
+	"ecmaFeatures": {
+		"jsx": true,
+		"blockBindings": true,
+		"classes": true,
+		"objectLiteralShorthandMethods": true,
+		"objectLiteralShorthandProperties": true,
+		"modules": true,
+		"arrowFunctions": true,
+		"destructuring": true,
+		"templateStrings": true
+	},
+
+	"rules": {
+
+		//
+		"brace-style": [2, "1tbs"],
+
+		//
+		"default-case": 2,
+
+		//
+		"camelcase": 2,
+
+		//
+		"consistent-this": [2, "_this"],
+
+		//
+		"curly": 2,
+
+		//
+		"dot-notation": 0,
+
+		//
+		"eol-last": 2,
+
+		//
+		"func-names": 2,
+
+		//
+		"func-style": [2, "declaration"],
+
+		//
+		"guard-for-in": 2,
+
+		//
+		"key-spacing": [2, { "beforeColon": false, "afterColon": true }],
+
+		//
+		"new-cap": 0,
+
+		//
+		"no-floating-decimal": 2,
+
+		//
+		"no-lonely-if": 2,
+
+		//
+		"no-mixed-spaces-and-tabs": [2, true],
+
+		//
+		"no-multiple-empty-lines": 2,
+
+		//
+		"no-nested-ternary": 2,
+
+		//
+		"no-spaced-func": 2,
+
+		//
+		"no-use-before-define": 2,
+
+		//
+		"no-undefined": 2,
+
+		// foo
+		"no-underscore-dangle": 0,
+
+		// would much prefer "tabs"
+		"indent": [2, "tab"],
+
+		// faster to type
+		"quotes": [2, "single"],
+
+		//
+		"radix": 2,
+
+		//
+		"react/display-name": 2,
+
+		//
+		"react/jsx-quotes": [2, "single"],
+
+		//
+		"react/jsx-no-undef": 2,
+
+		//
+		"react/jsx-sort-props": 0,
+
+		//
+		"react/jsx-uses-vars": 2,
+
+		//
+		"react/no-multi-comp": 2,
+
+		//
+		"react/prop-types": 0,
+
+		//
+		"react/wrap-multilines": 0,
+
+		//
+		"space-after-keywords": [2, "always"],
+
+		//
+		"spaced-line-comment": 2,
+
+		//
+		"strict": 0,
+
+		//
+		"valid-jsdoc": [2, {
+			"prefer": {
+				"return": "returns"
+			}
+		}],
+
+		//
+		"wrap-iife": 2,
+
+		//
+		"yoda": [0, "always"]
+	}
+}

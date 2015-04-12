@@ -1,0 +1,17 @@
+# Local configuration variables which could include potentially sensitive
+# information like AWS keys.
+.env
+
+# Generated files (e.g. via webpack).
+build
+
+# All the code for the modules you use and probably shouldn't be version
+# controlled since npm can manage it just fine. For a lovely discussion, see:
+# https://npmjs.org/doc/faq.html#Should-I-check-my-node_modules-folder-into-git
+node_modules
+
+# Coverage reports from istanbul.
+coverage
+
+# Log output (e.g. "npm-debug.log").
+*.log
