@@ -1,28 +1,39 @@
 
-/*
-var AWS = require('aws-sdk'),
-	gulp = require('gulp');
+var _ = require('lodash'),
+	AWS = require('aws-sdk'),
+	gulp = require('gulp'),
+	through2 = require('through2');
 
-// Invalidate the CloudFront cache
-gulp.task('invalidate', function invalidate(done) {
+/**
+ * @param {Object} options Configuration options.
+ * @returns {Object} Stream.
+ */
+function invalidator(options) {
+	var items = [ ];
 	var cloudfront = new AWS.CloudFront();
-	var items = [ '/index.html' ];
-	var params = {
-		DistributionId: process.env['DEPLOY_DISTRIBUTION'],
-		InvalidationBatch: {
-			CallerReference: Math.random().toString(38).substr(1),
-			Paths: {
-				Quantity: items.length,
-				Items: items
+	return through2.obj(function onFile(file, enc, done) {
+		items.push(file.path.substr(file.base.length));
+		done(null, file);
+	}, function onEnd(done) {
+		var params = _.assign({
+			InvalidationBatch: {
+				CallerReference: Math.random().toString(38).substr(1),
+				Paths: {
+					Quantity: items.length,
+					Items: items
+				}
 			}
-		}
-	};
-	cloudfront.createInvalidation(params, done);
-});
-*/
+		}, options);
+		cloudfront.createInvalidation(params, done);
+	});
+}
 
-var gulp = require('gulp');
-
-gulp.task('foo', function(done) {
-	done();
+// Invalidate the CloudFront cache. Since the only files that are served in a
+// non-versioned manner are HTML files, those are the only ones that we look
+// to invalidate.
+gulp.task('invalidate', function invalidate() {
+	return gulp.src('build/**/*.html')
+		.pipe(invalidator({
+			DistributionId: process.env['DEPLOY_DISTRIBUTION']
+		}));
 });

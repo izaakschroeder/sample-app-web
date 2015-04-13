@@ -13,7 +13,8 @@ gulp.task('publish', function publish() {
 			query: {
 				// Since this is a static site and all assets are versioned by
 				// their hash, we effectively disable cache expiration (i.e.
-				// things are cached forever).
+				// things are cached forever). Anything that isn't versioned
+				// (i.e. HTML files) is explicitly invalidated anyway.
 				CacheControl: 'max-age=315360000',
 				Expires: (new Date('Jan 1 2099')).toISOString()
 			}

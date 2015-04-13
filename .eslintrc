@@ -95,8 +95,9 @@
 		//
 		"radix": 2,
 
-		//
-		"react/display-name": 2,
+		// This is not necessary with ES6 classes since the display name comes
+		// from the class name.
+		"react/display-name": 0,
 
 		//
 		"react/jsx-quotes": [2, "single"],
