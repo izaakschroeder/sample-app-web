@@ -22,3 +22,7 @@ gulp.task('build', function build(callback) {
 	// Fire off webpack.
 	webpack(config, callback);
 });
+
+gulp.task('pages', function pages() {
+
+});
