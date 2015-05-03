@@ -4,22 +4,13 @@
 		"node": true
 	},
 
+	// Use the power of babel for parsing.
+	"parser": "babel-eslint",
+
 	"plugins": [
 		// Include lint rules for JSX
 		"react"
 	],
-
-	"ecmaFeatures": {
-		"jsx": true,
-		"blockBindings": true,
-		"classes": true,
-		"objectLiteralShorthandMethods": true,
-		"objectLiteralShorthandProperties": true,
-		"modules": true,
-		"arrowFunctions": true,
-		"destructuring": true,
-		"templateStrings": true
-	},
 
 	"rules": {
 
@@ -53,7 +44,8 @@
 		//
 		"guard-for-in": 2,
 
-		//
+		// Enforce consistent styling on object literal keys; so
+		// foo: bar is good, foo :bar is bad.
 		"key-spacing": [2, { "beforeColon": false, "afterColon": true }],
 
 		//
@@ -99,7 +91,7 @@
 		// from the class name.
 		"react/display-name": 0,
 
-		//
+		// May as well have consistency between JavaScript quotes and JSX ones.
 		"react/jsx-quotes": [2, "single"],
 
 		//

@@ -1,13 +1,13 @@
 
-var gulp = require('gulp'),
-	webpack = require('webpack');
+import gulp from 'gulp';
+import webpack from 'webpack';
 
 // Use webpack to build everything. This is more or less equivalent to invoking
 // `webpack -p` on the command line.
-gulp.task('build', function build(callback) {
+gulp.task('build', callback => {
 
 	// Load the main webpack configuration.
-	var config = Object.create(require('../webpack.config'));
+	let config = Object.create(require('../webpack.config'));
 
 	// For production build we want to make everything nice and small, so add
 	// some code for minimization. Note that it is important to set the
@@ -21,8 +21,4 @@ gulp.task('build', function build(callback) {
 
 	// Fire off webpack.
 	webpack(config, callback);
-});
-
-gulp.task('pages', function pages() {
-
 });

@@ -1,12 +1,7 @@
 
-import { Component } from 'react';
-import { map } from 'lodash';
+import React, { Component } from 'react';
 
 export default class About extends Component {
-
-	get displayName() {
-		return 'index';
-	}
 
 	render() {
 		return <html>
@@ -20,9 +15,7 @@ export default class About extends Component {
 				<div>
 					{this.props.children}
 				</div>
-				map(this.props.scripts, script => {
-					<script src={script} type='text/javascript'/>
-				})
+				
 			</body>
 		</html>;
 	}

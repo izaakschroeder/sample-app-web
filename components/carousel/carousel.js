@@ -8,10 +8,6 @@ import './styles.scss';
  */
 export default class Carousel extends Component {
 
-	get displayName() {
-		return 'carousel';
-	}
-
 	render() {
 		return <div className='carousel'>
 			<CSSTransitionGroup component='div' transitionName='example'>

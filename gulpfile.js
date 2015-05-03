@@ -17,6 +17,9 @@ var gulp = require('gulp'),
 // Load configuration values from `.env` files; don't complain if we can't.
 dotenv.load({ silent: true });
 
+// Allow for ES6 in task files.
+require("babel/register");
+
 // Load all tasks into the registry.
 var hub = new HubRegistry(['./tasks/*.task.js']);
 

@@ -4,6 +4,8 @@ var _ = require('lodash'),
 	gulp = require('gulp'),
 	through2 = require('through2');
 
+// https://github.com/smysnk/gulp-cloudfront/blob/master/tool.js
+
 /**
  * @param {Object} options Configuration options.
  * @returns {Object} Stream.
@@ -31,9 +33,9 @@ function invalidator(options) {
 // Invalidate the CloudFront cache. Since the only files that are served in a
 // non-versioned manner are HTML files, those are the only ones that we look
 // to invalidate.
-gulp.task('invalidate', function invalidate() {
-	return gulp.src('build/**/*.html')
+gulp.task('invalidate', () =>
+	gulp.src('build/**/*.html')
 		.pipe(invalidator({
 			DistributionId: process.env['DEPLOY_DISTRIBUTION']
-		}));
-});
+		}))
+);

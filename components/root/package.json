@@ -1,0 +1,9 @@
+{
+	"main": "root.js",
+	"dependencies": {
+		"lodash": "^3.6.0",
+	},
+	"peerDependencies": {
+		"react": "^0.13.1"
+	}
+}

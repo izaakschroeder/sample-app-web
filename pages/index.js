@@ -4,10 +4,6 @@ import { map } from 'lodash';
 
 export default class Index extends Component {
 
-	get displayName() {
-		return 'index';
-	}
-
 	render() {
 		return <html>
 			<head>

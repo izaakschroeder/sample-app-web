@@ -4,8 +4,8 @@ var url = require('url'),
 	s3 = require('vinyl-s3');
 
 // Publish everything to an S3 bucket.
-gulp.task('publish', function publish() {
-	return gulp.src('build/**/*')
+gulp.task('publish', () =>
+	gulp.src('build/**/*')
 		.pipe(s3.dest(url.format({
 			protocol: 's3',
 			host: process.env['DEPLOY_BUCKET'],
@@ -18,5 +18,5 @@ gulp.task('publish', function publish() {
 				CacheControl: 'max-age=315360000',
 				Expires: (new Date('Jan 1 2099')).toISOString()
 			}
-		})));
-});
+		})))
+);
