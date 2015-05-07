@@ -18,12 +18,12 @@
 		"lodash": "^3.6.0",
 		"react": "^0.13.1",
 		"bluebird": "^2.9.24",
-		"kefir": "^2.0.2",
+		"afflux": "^2.0.2",
 		"script-escape": "^0.1.0"
 	},
 	"devDependencies": {
-		"eslint": "^0.19.0",
-		"eslint-plugin-react": "^2.1.0",
+		"eslint": "^0.20.0",
+		"eslint-plugin-react": "^2.2.0",
 		"babel-eslint": "^3.0.1",
 		"gulp": "gulpjs/gulp#4.0",
 		"gulp-hub": "frankwallis/gulp-hub#4.0",
@@ -36,6 +36,8 @@
 		"babel-loader": "^5.0.0",
 
 		"express": "^5.0.0-alpha.1",
+		"font-loader": "^0.1.0",
+		"icon-loader": "^0.1.0",
 
 		"extract-stats-webpack-plugin": "^0.1.0",
 		"extract-text-webpack-plugin": "^0.7.0",

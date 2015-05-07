@@ -1,4 +1,3 @@
-
 /**
  * This is the gulpfile. It is used by `gulp` to define a list of tasks to run
  * similar to Ruby's `rake`. To see all available tasks simply type `gulp -T`

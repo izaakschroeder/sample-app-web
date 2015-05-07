@@ -20,42 +20,6 @@ Future work:
 Installing node on the server see [here](http://stackoverflow.com/a/19040346).
 
 
-### Git
-
-
-### Terminal
-
-```sh
-# install fish and tmux
-brew install fish tmux
-# install powerline
-
-```
-
-
-### Editor
-
-#### Atom
-
-```sh
-# install atom
-open https://atom.io/
-# required
-apm install linter language-gherkin editorconfig linter-eslint linter-west
-# ux
-apm install sublime-tabs file-icons
-# autocomplete
-apm install autocomplete-plus autocomplete-paths autocomplete-snippets
-# git extras
-apm install git-blame merge-conflicts
-```
-
-#### vim
-
-```sh
-...
-```
-
 ```sh
 #!/bin/sh
 
@@ -75,6 +39,8 @@ yo web:page
 yo web:feature
 yo web:domain
 yo web:host
+yo web:action
+yo web:component
 ```
 
 
@@ -92,9 +58,16 @@ yo web:host
 [immutable]: http://facebook.github.io/immutable-js
 [eslint-md]: https://github.com/wooorm/eslint-md/
 
+http://docs.fluentd.org/
 
 [analytics]: https://github.com/tagomoris/fluent-plugin-forest
 https://groups.google.com/forum/#!msg/reactjs/PpsvVPvhBbc/BZoG-bFeOwoJ
 http://stackoverflow.com/questions/25630611/should-flux-stores-or-actions-or-both-touch-external-services
 http://briandipalma.github.io/flux-for-components/
 http://stackoverflow.com/questions/26787198/reactjs-modal-using-javascript-and-css/26789089#26789089
+http://codepen.io/somethingkindawierd/blog/react-mixin-scroll-lock
+http://bensmithett.com/smarter-css-builds-with-webpack/
+http://mortoray.com/2015/05/06/fast-build-turnaround-time-is-essential/
+
+picoagent --
+https://github.com/sindresorhus/got

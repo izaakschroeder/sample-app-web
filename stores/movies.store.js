@@ -19,10 +19,12 @@ class Collection {
 	 * and each subsequent value is that set updated to be the current state.
 	 * The set is implemented as a map whose keys are the ids of objects.
 	 */
-	stream = updates.scan((prev, fn) => fn(prev), Map());
+	stream = updates;
 
 	constructor() {
-
+		derp = most.merge(
+			action.create
+		).scan((prev, fn) => fn(prev), Map())
 	}
 
 	listenTo(stream) {
